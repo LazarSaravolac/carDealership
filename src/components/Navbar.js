@@ -1,5 +1,5 @@
 
-import logo from '../images/logo.svg';
+
 import img from '../images/logoF.jpg';
 import React, { Component } from 'react';
 import {Link} from 'react-router-dom';
