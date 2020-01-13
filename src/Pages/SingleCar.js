@@ -1,6 +1,4 @@
 import React, { Component } from 'react';
-import ImgSection from '../components/ImgSection';
-import Banner from '../components/Banner';
 import { Link } from 'react-router-dom';
 import { CarContext } from '../context';
 import Title from '../components/Title';
@@ -15,25 +13,25 @@ export default class SingleCar extends Component {
         const car = getCar(this.state.slug);
         console.log(car);
         if (!car) {
-            return <div></div>
+            return null;
         }
         
   return(
       <>    <section className="single-car">
 
-          <section className="title" style={{marginTop:"20px"}}>
+          <section className="title" style={{paddingTop:"20px"}}>
           <Title title={`${car.name}`}/>
           </section>
           <section className="single-car-container">
               <img src={car.images[0]} alt="" />   
-              <p>{car.price} $</p>
+              {/* <p>{car.price} $</p> */}
           </section>
 
           <section className="single-car-infos">
               <article>
                   <h1>marka vozila</h1>
                   <p>{car.brand}</p>
-              </article>
+              </article> 
               <article>
                   <h1>model vozila</h1>
                   <p>{car.model}</p>
@@ -48,7 +46,7 @@ export default class SingleCar extends Component {
               </article>
               <article>
                   <h1>cena vozila</h1>
-                  <p>{car.price}</p>
+                  <p>{car.price} $</p>
               </article>
               <article>
                   <h1>kubikaza vozila</h1>

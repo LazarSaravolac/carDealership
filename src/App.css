@@ -357,8 +357,9 @@ body {
 
 
 .single-car {
-  width:70vw;
+  width:60vw;
   margin:0 auto;
+  background: rgb(189, 188, 182);
 }
 
 .single-car-container img {
@@ -386,7 +387,7 @@ body {
 }
 
 .single-car-gallery {
-  width: 90%;
+  width: 100%;
   margin: 0 auto;
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
@@ -423,10 +424,12 @@ body {
   width: 80%;
   margin: 50px auto;
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
   grid-row-gap: 2rem;
-  grid-column-gap: 70px;
+  grid-column-gap: 30px;
 }
+
+
 
 @media screen and (min-width: 1200px) {
   .single-car-info .extras{
@@ -435,3 +438,95 @@ body {
 
  
 }
+
+/* carlist */
+.carslist {
+  padding: 5rem 0;
+}
+.carslist-center {
+  width: 80vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(270px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 30px;
+}
+.empty-search {
+  text-align: center;
+  text-transform: capitalize;
+  margin: 2rem 0;
+  padding: 1rem;
+  letter-spacing: var(--mainSpacing);
+}
+@media screen and (min-width: 776px) {
+  .carslist-center {
+    width: 90vw;
+  }
+}
+@media screen and (min-width: 992px) {
+  .carslist-center {
+    width: 95vw;
+    max-width: 1170px;
+  }
+}
+/* end of carlist */
+
+/*  car fitler*/
+.filter-container {
+  padding: 5rem 0;
+}
+.filter-form {
+  width: 60vw;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(202px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 40px;
+}
+.form-group {
+  text-transform: capitalize;
+}
+.form-group label {
+  display: block;
+  letter-spacing: var(--mainSpacing);
+  margin-bottom: 0.5rem;
+}
+.form-control {
+  width: 100%;
+  background: transparent;
+  font-size: 1rem;
+}
+.size-inputs {
+  display: flex;
+}
+.size-input {
+  width: 40%;
+  padding: 0.2rem;
+  border: 1px solid var(--mainBlack);
+  border-radius: 0.3rem;
+  margin-right: 0.3rem;
+}
+.single-extra label {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+@media screen and (min-width: 776px) {
+  .filter-form {
+    width: 70vw;
+  }
+}
+@media screen and (min-width: 992px) {
+  .filter-form {
+    width: 95vw;
+    max-width: 1170px;
+  }
+}
+/* end of car fitler*/
+
+.single-extra label {
+  display: inline-block;
+  font-size: 0.8rem;
+  margin-left: 0.5rem;
+}
+

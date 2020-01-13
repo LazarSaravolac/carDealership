@@ -10,9 +10,9 @@ export default function Car({ car }) {
                     <h6>${price}</h6>
                     <p>Akcija</p>
                 </div>
-                <div className="car-hover-text">
+                {/* <div className="car-hover-text">
                     <h6>{name}</h6>
-                </div>
+                </div> */}
                 <Link to={`/singleCar/${slug}`} className="btn-primary car-link">
                     Detalji
                 </Link>
