@@ -11,9 +11,9 @@ function App() {
     <div >
       <Navbar />
       <Switch>
-        <Route path="/" component={Home} />
-        <Route path="/singleCar/:slug" component={SingleCar} />
-        <Route path="/" component={Cars} />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/singleCar/:slug" component={SingleCar} />
+        <Route exact path="/" component={Cars} />
         <Route  component={ErrorPage}/>
       </Switch>
     </div>

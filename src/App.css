@@ -259,7 +259,6 @@ body {
   width: 100%;
   display: block;
   transition: var(--mainTransition);
-  height: 100%!important;
 }
 .price-top {
   position: absolute;
@@ -286,17 +285,37 @@ body {
   transform: scale(0);
   transition: all 0.3s linear;
 }
+.car-hover-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: scale(0);
+  transition: all 0.3s linear;
+  color: white;
+  font-size: 27px;
+}
+.img-container{
+  overflow: hidden;
+}
+
 .img-container:hover {
   background: rgba(0, 0, 0, 0.8);
 }
 .img-container:hover img {
   opacity: 0.3;
+  transform: scale(1.3);
 }
 .img-container:hover .price-top {
   opacity: 0;
 }
 .img-container:hover .car-link {
   transform: translate(-50%, -50%) scale(1);
+}
+.img-container:hover .car-hover-text {
+  transform:translate(-50%, -300%) scale(1);
+}
+.img-container:hover .car-info {
+  opacity: 0;
 }
 .car-info {
   background: var(--darkGrey);
@@ -306,6 +325,8 @@ body {
   font-weight: 700;
   letter-spacing: var(--mainSpacing);
 }
+
+
 /* end of car  */
 
 /* featured rooms */
@@ -319,7 +340,7 @@ body {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
   grid-row-gap: 2rem;
-  grid-column-gap: 40px;
+  grid-column-gap: 70px;
 }
 @media screen and (min-width: 776px) {
   .featured-cars-center {
@@ -332,4 +353,85 @@ body {
     width: 95vw;
     max-width: 1170px;
   }
+}
+
+
+.single-car {
+  width:70vw;
+  margin:0 auto;
+}
+
+.single-car-container img {
+  width:100%;
+  height: 50vh;
+}
+
+.single-car-container {
+  position: relative;
+}
+
+.single-car-container p {
+  position: absolute;
+  bottom: 6px;
+  right: 0;
+  width:15%;
+  height: 5%;
+  font-size: 20px;
+  background: rgb(156, 148, 142);
+  color: white;
+  /* text-align: center; */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.single-car-gallery {
+  width: 90%;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 40px;
+}
+
+.single-car-gallery img {
+  width: 80%;
+  margin:80px auto;
+}
+
+.single-car-info {
+  width: 80%;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(270px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 70px;
+  text-align: left;
+}
+
+.single-car-info .desc {
+  text-align: justify;
+}
+.single-car-info .info {
+  display: block;
+  width:100%;
+  text-align: center;
+  margin:20px 0;
+}
+
+.single-car-infos {
+  width: 80%;
+  margin: 50px auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(50px, 1fr));
+  grid-row-gap: 2rem;
+  grid-column-gap: 70px;
+}
+
+@media screen and (min-width: 1200px) {
+  .single-car-info .extras{
+   margin-left: auto;
+  }
+
+ 
 }

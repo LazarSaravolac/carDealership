@@ -49,6 +49,11 @@ class CarProvider extends Component {
         this.getData();
     }
 
+    getCar=(slug)=> {
+        let car =this.state.cars.find(car => car.slug === slug);
+        return car;
+    }
+
     formatData(items) {
         let tempItems = items.map(item => {
             let id = item.sys.id;
@@ -66,7 +71,8 @@ class CarProvider extends Component {
   render (){
   return(
     <CarContext.Provider value={{
-        ...this.state
+          ...this.state,
+           getCar:this.getCar 
     }}>
         {this.props.children}
       </CarContext.Provider>
